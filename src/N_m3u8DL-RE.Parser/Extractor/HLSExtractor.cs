@@ -254,6 +254,10 @@ internal class HLSExtractor : IExtractor
                 segment.StartRange = o ?? segments.Last().StartRange + segments.Last().ExpectLength;
                 expectSegment = true;
             }
+            else if (line.StartsWith(HLSTags.ext_x_playlist_type))
+            {
+                isEndlist = line.Trim().EndsWith("VOD");
+            }
             // 国家地理去广告
             else if (line.StartsWith("#UPLYNK-SEGMENT"))
             {
@@ -495,7 +499,7 @@ internal class HLSExtractor : IExtractor
             {
                 (this.M3u8Content, url) = await HTTPUtil.GetWebSourceAndNewUrlAsync(url, ParserConfig.Headers);
             }
-            catch (HttpRequestException) when (url != ParserConfig.OriginalUrl)
+            catch (HttpRequestException) when (ParserConfig.OriginalUrl.StartsWith("http") && url != ParserConfig.OriginalUrl)
             {
                 // 当URL无法访问时，再请求原始URL
                 (this.M3u8Content, url) = await HTTPUtil.GetWebSourceAndNewUrlAsync(ParserConfig.OriginalUrl, ParserConfig.Headers);

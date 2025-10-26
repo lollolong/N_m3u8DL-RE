@@ -306,15 +306,15 @@ internal static class StaticText
         ),
         ["cmd_savePattern"] = new TextContainer
         (
-            zhCN: "设置保存文件命名模板, 支持使用变量",
-            zhTW: "",
-            enUS: ""
+            zhCN: "设置保存文件命名模板, 支持使用变量: <SaveName>、<Id>、<Codecs>、<Language>、<Resolution>、<Bandwidth>、<MediaType>、<Channels>、<FrameRate>、<VideoRange>、<GroupId>、<Ext>",
+            zhTW: "設置保存檔案命名模板, 支持使用變數: <SaveName>、<Id>、<Codecs>、<Language>、<Resolution>、<Bandwidth>、<MediaType>、<Channels>、<FrameRate>、<VideoRange>、<GroupId>、<Ext>",
+            enUS: "Set output filename pattern with variables: <SaveName>, <Id>, <Codecs>, <Language>, <Resolution>, <Bandwidth>, <MediaType>, <Channels>, <FrameRate>, <VideoRange>, <GroupId>, <Ext>"
         ),
         ["cmd_logFilePath"] = new TextContainer
         (
-            zhCN: "设置日志文件路径",
-            zhTW: "設定日誌檔案路徑",
-            enUS: "Set log file path"
+            zhCN: @"设置日志文件路径, 例如 C:\Logs\log.txt",
+            zhTW: @"設定日誌檔案路徑, 例如 C:\Logs\log.txt",
+            enUS: @"Set log file path, Example: C:\Logs\log.txt"
         ),
         ["cmd_skipDownload"] = new TextContainer
         (
@@ -969,6 +969,12 @@ internal static class StaticText
             zhCN: "没有找到需要下载的流",
             zhTW: "沒有找到需要下載的流",
             enUS: "No stream found to download"
+        ),
+        ["loadUrlFailed"] = new TextContainer
+        (
+            zhCN: "加载URL失败",
+            zhTW: "載入URL失敗",
+            enUS: "Failed to load URL"
         ),
 
     };
