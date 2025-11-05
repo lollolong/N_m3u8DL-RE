@@ -306,9 +306,21 @@ internal static class StaticText
         ),
         ["cmd_savePattern"] = new TextContainer
         (
-            zhCN: "设置保存文件命名模板, 支持使用变量: <SaveName>、<Id>、<Codecs>、<Language>、<Resolution>、<Bandwidth>、<MediaType>、<Channels>、<FrameRate>、<VideoRange>、<GroupId>、<Ext>",
-            zhTW: "設置保存檔案命名模板, 支持使用變數: <SaveName>、<Id>、<Codecs>、<Language>、<Resolution>、<Bandwidth>、<MediaType>、<Channels>、<FrameRate>、<VideoRange>、<GroupId>、<Ext>",
-            enUS: "Set output filename pattern with variables: <SaveName>, <Id>, <Codecs>, <Language>, <Resolution>, <Bandwidth>, <MediaType>, <Channels>, <FrameRate>, <VideoRange>, <GroupId>, <Ext>"
+            zhCN: "设置保存文件命名模板, 支持使用变量: \n" +
+                  "<SaveName>, <Id>, <Codecs>, <Language>, <Resolution>, \n" +
+                  "<Bandwidth>, <MediaType>, <Channels>, <FrameRate>, \n" +
+                  "<VideoRange>, <GroupId>, <Ext>\n" +
+                  "示例: --save-pattern \"<SaveName>_<Resolution>_<Bandwidth>\"",
+            zhTW: "設置保存檔案命名模板, 支持使用變數: \n" +
+                  "<SaveName>, <Id>, <Codecs>, <Language>, <Resolution>, \n" +
+                  "<Bandwidth>, <MediaType>, <Channels>, <FrameRate>, \n" +
+                  "<VideoRange>, <GroupId>, <Ext>\n" +
+                  "示例: --save-pattern \"<SaveName>_<Resolution>_<Bandwidth>\"",
+            enUS: "Set output filename pattern with variables: \n" +
+                  "<SaveName>, <Id>, <Codecs>, <Language>, <Resolution>, \n" +
+                  "<Bandwidth>, <MediaType>, <Channels>, <FrameRate>, \n" +
+                  "<VideoRange>, <GroupId>, <Ext>\n" +
+                  "Example: --save-pattern \"<SaveName>_<Resolution>_<Bandwidth>\""
         ),
         ["cmd_logFilePath"] = new TextContainer
         (
@@ -880,6 +892,12 @@ internal static class StaticText
             zhTW: "內容匹配: [white on deepskyblue1]HTTP Live Streaming[/]",
             enUS: "Content Matched: [white on deepskyblue1]HTTP Live Streaming[/]"
         ),
+        ["matchBinaryData"] = new TextContainer
+        (
+            zhCN: "内容匹配: [white on deepskyblue1]Binary Data[/]",
+            zhTW: "內容匹配: [white on deepskyblue1]Binary Data[/]",
+            enUS: "Content Matched: [white on deepskyblue1]Binary Data[/]"
+        ),
         ["partMerge"] = new TextContainer
         (
             zhCN: "分片数量大于1800个，开始分块合并...",
@@ -888,9 +906,9 @@ internal static class StaticText
         ),
         ["notSupported"] = new TextContainer
         (
-            zhCN: "当前输入不受支持: ",
-            zhTW: "當前輸入不受支援: ",
-            enUS: "Input not supported: "
+            zhCN: "当前输入不受支持 ",
+            zhTW: "當前輸入不受支援 ",
+            enUS: "Input not supported "
         ),
         ["parsingStream"] = new TextContainer
         (
